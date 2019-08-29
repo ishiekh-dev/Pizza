@@ -27,6 +27,6 @@
         "laravel-echo": "^1.5.4",
         "pusher-js": "^5.0.0",
         "vue-strap": "github:wffranco/vue-strap",
-        "vue-timeago": "^3.3.6"
+        "vue-timeago": "^3.4.4"
     }
 }

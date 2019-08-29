@@ -20,7 +20,7 @@ class CreateOrdersTable extends Migration
             $table->string('size')->nullable();
             $table->string('toppings')->nullable();
             $table->string('instructions')->nullable();
-            $table->unsignedInteger('status_id');
+            $table->unsignedInteger('status_id')->default(1);
 
 
             $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade');

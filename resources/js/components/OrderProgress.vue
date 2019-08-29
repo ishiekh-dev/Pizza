@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="progress">
-          <progressbar :now="progress" type="success" striped animated></progressbar>
+          <progressbar :now="progress" label type="success" striped animated></progressbar>
         </div>
 
         <div class="order-status">
@@ -32,8 +32,10 @@
         mounted() {
             Echo.private('pizza-tracker.' + this.order_id)
             .listen('OrderStatusChanged', (order) => {
+          
               this.statusNew = order.status_name
               this.progress = order.status_percent
+
             });
         }
     }
